@@ -1,0 +1,62 @@
+.kanban {
+	display: flex; /*used to make every coloumn layout. */
+	padding: 30px;
+	width: 100%;
+	height: 700px;
+	background-image: url("kanban_image.jpg");
+	border-radius: 5px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.kanban * {
+	font-family: sans-serif;
+}
+
+.kanban__column {
+	flex: 1; /*every coloumn have equal width */
+}
+
+.kanban__column:not(:last-child) {
+	margin-right: 30px;
+}
+
+.kanban__column-title {
+	margin: 100px;
+	font-size: 40px;
+	color: white;
+	user-select: none; /* user can't select it. */
+	font-family: elephant;
+}
+
+.kanban__item-input {
+	padding: 10px 10px; /*(top - bottom) (left and right) */
+box-sizing: content-box;
+	background: white;
+
+	border-radius: 5px;
+	cursor: pointer; /* you can click and drag */
+}
+
+.kanban__dropzone {
+	height: 30px;
+	transition: background 0.15s, height 0.15s; /*  when you do transition then some changes took place to indicate that you can drop here.*/
+}
+
+.kanban__dropzone--active {
+	height: 20px;
+	background: rgba(0, 0, 0, 0.25);
+}
+
+.kanban__add-item {
+	width: 80%;
+	padding: 10px 0;
+	margin-left: 20px;
+	font-size: 26px;
+	color: white;
+	background: rgba(0, 0, 0, 0.1);
+	border:outset;
+	border-radius: 5px;
+	
+	cursor: pointer;
+}
